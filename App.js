@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
 import Header from "./components/Header";
 import Recents from "./components/Recents";
-import DailyMixes from "./components/DailyMixes";
 import Audiobooks from "./components/Audiobooks";
-import { MusicContext } from "./MusicContext";
+import MusicContext from "./MusicContext";
 
 const App = () => {
   const [recents] = useState([
@@ -31,48 +30,37 @@ const App = () => {
     },
   ]);
 
-  const [dailyMixes] = useState([
-    { 
-      id: "d1", 
-      title: "Daily Well...",
-      image: "https://picsum.photos/150/150?random=4"
-    },
-    { 
-      id: "d2", 
-      title: "Nt/o-Hop C...",
-      image: "https://picsum.photos/150/150?random=5"
-    },
-    { 
-      id: "d3", 
-      title: "80s Hard...",
-      image: "https://picsum.photos/150/150?random=6"
-    },
-  ]);
-
   const [audiobooks] = useState([
     { 
       id: "a1", 
-      title: "Mastering Conversation...", 
-      author: "Helen Stone", 
-      premium: true,
+      title: "China Harayeko", 
+      author: "Unknown Author",
       image: "https://picsum.photos/150/150?random=7"
     },
     { 
       id: "a2", 
-      title: "Control your mind and...", 
-      author: "Eric Robertson", 
-      premium: true,
+      title: "World War Z", 
+      author: "Max Brooks",
       image: "https://picsum.photos/150/150?random=8"
+    },
+    { 
+      id: "a3", 
+      title: "Running of the Memory", 
+      author: "Mark Carroll",
+      image: "https://picsum.photos/150/150?random=9"
     },
   ]);
 
   return (
     <View style={styles.container}>
-      <MusicContext.Provider value={{ recents, dailyMixes, audiobooks }}>
-        <ScrollView contentContainerStyle={styles.content}>
+      <MusicContext.Provider value={{ recents, audiobooks }}>
+        <ScrollView 
+          style={styles.scrollView}
+          contentContainerStyle={styles.contentContainer}
+          showsVerticalScrollIndicator={false}
+        >
           <Header />
           <Recents />
-          <DailyMixes />
           <Audiobooks />
         </ScrollView>
       </MusicContext.Provider>
@@ -85,10 +73,12 @@ export default App;
 const styles = StyleSheet.create({
   container: { 
     flex: 1, 
-    backgroundColor: "#fff" 
+    backgroundColor: "#121212" // Dark background like music apps
   },
-  content: { 
-    padding: 16, 
-    gap: 24 
+  scrollView: {
+    flex: 1,
+  },
+  contentContainer: {
+    paddingBottom: 24,
   },
 });
