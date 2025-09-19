@@ -7,7 +7,7 @@ const Audiobooks = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.sectionTitle}>Audiobooks for you</Text>
+      <Text style={styles.sectionTitle}>AudioBooks</Text>
       <View style={styles.list}>
         {audiobooks.map((item) => (
           <View key={item.id} style={styles.item}>

@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
   appTitle: {
     fontSize: 32,
     fontWeight: "bold",
-    color: "#1DB954", // Spotify green color
+    color: "#1DB954", 
     marginBottom: 16,
   },
   menu: {

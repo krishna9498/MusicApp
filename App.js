@@ -9,23 +9,20 @@ const App = () => {
   const [recents] = useState([
     { 
       id: "r1", 
-      title: "Pop mix", 
+      title: "Pop Culture", 
       type: "Playlist", 
-      user: "User 1",
       image: "https://picsum.photos/150/150?random=1"
     },
     { 
       id: "r2", 
-      title: "Hot Hits", 
+      title: "Top Hits", 
       type: "Playlist", 
-      user: "User 1",
       image: "https://picsum.photos/150/150?random=2"
     },
     { 
       id: "r3", 
-      title: "Upload Mix", 
+      title: "Chill Vibes", 
       type: "Playlist", 
-      user: "User 1",
       image: "https://picsum.photos/150/150?random=3"
     },
   ]);
@@ -33,22 +30,17 @@ const App = () => {
   const [audiobooks] = useState([
     { 
       id: "a1", 
-      title: "China Harayeko", 
-      author: "Unknown Author",
+      title: "Muna Madan", 
+      author: "Laxmi Prasad Devkota",
       image: "https://picsum.photos/150/150?random=7"
     },
     { 
       id: "a2", 
-      title: "World War Z", 
-      author: "Max Brooks",
+      title: "Summer Love", 
+      author: "Saigrace",
       image: "https://picsum.photos/150/150?random=8"
     },
-    { 
-      id: "a3", 
-      title: "Running of the Memory", 
-      author: "Mark Carroll",
-      image: "https://picsum.photos/150/150?random=9"
-    },
+  
   ]);
 
   return (
